@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+.search h1 {
+  text-align: center;
+  padding: 15px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+.search form {
+  margin: 10px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  color: black;
+}
+#input {
+  padding: 10px;
+  margin: 0 0 10px 0;
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  border: 0.5px solid black;
+  color: black;
+  z-index: 2;
+}
+
+#submit {
+  width: 40%;
+  margin-top: 10px;
+  outline: none;
+  border: solid rgba(0, 0, 0, 0.3) 1px;
+
+  padding: 8px;
+  font-weight: bold;
+
+  background-color: rgb(173, 216, 230);
+  color: black;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: rgb(59, 179, 219);
+  color: white;
+}
+
+/*  Heroes List */
+.heros {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.eachhero {
+  display: grid;
+  grid-template-areas:
+    "h1 h1 h1"
+    "img powerstats appearance"
+    "img biography biography";
+  grid-template-rows: 10vh 40vh 50vh;
+  grid-template-columns: 35vw 35vw auto;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+/*    h1     */
+
+.eachhero h1 {
+  grid-area: h1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*      image    */
+
+.eachhero .img {
+  grid-area: img;
+  border: black 1px solid;
+}
+
+.eachhero .img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*  Power List */
+.powerstats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: rgb(226, 210, 210);
+  border: 1px black solid;
+  padding: 20px;
+  grid-area: powerstats;
+}
+
+.emptybar {
+  background-color: black;
+  width: 80%;
+  height: 8px;
+  border: 2px black solid;
+  margin-bottom: 2px;
+}
+.databar {
+  background-color: yellow;
+  height: 8px;
+}
+.skillname {
+  font-size: 20px;
+}
+
+/*  biography */
+
+.biography {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: rgb(226, 210, 210);
+  border: 1px black solid;
+  padding: 20px;
+  grid-area: biography;
+}
+.biographydata span {
+  font-weight: bold;
+}
+
+/* appearance */
+
+.appearance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: rgb(226, 210, 210);
+  border: 1px black solid;
+  padding: 20px;
+  grid-area: appearance;
+}
+.appearancedata span {
+  font-weight: bold;
+}
+
+/*  work */
+
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: rgb(226, 210, 210);
+  border: 1px black solid;
+  padding: 20px;
+  grid-area: work;
+}
+.workdata span {
+  font-weight: bold;
+}
+
+/*  connections */
+
+.connections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: rgb(226, 210, 210);
+  border: 1px black solid;
+  padding: 20px;
+  grid-area: connections;
+}
+.connectionsdata span {
+  font-weight: bold;
+}
+
+#hint {
+  cursor: pointer;
+  color: black;
+  text-shadow: white;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  right: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+  padding: 8px;
+
+  z-index: 1;
+}
+
+.up,
+.up2,
+.down {
+  opacity: 0.5;
+  height: 50px;
+  cursor: pointer;
+}
+
+.up:hover,
+.up2:hover,
+.down:hover {
+  opacity: 1;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>A Place for All Heroes</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="simple-hint.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="nav">
+      <img src="up.png" alt="up" class="up" />
+      <img src="2up.png" alt="2up" class="up2" />
+      <img src="down.png" alt="down" class="down" />
+    </div>
+    <div class="search">
+      <img src="bg.jpg" alt="Marvel Heroes" />
+
+      <form>
+        <h1>Look Up Your Hero!</h1>
+
+        <input
+          type="text"
+          id="input"
+          placeholder="Enter The Hero's Name"
+          autocomplete="off"
+        />
+
+        <span
+          data-hint="Superman, Spider-Man, Hulk, etc"
+          id="hint"
+          class="hint-bottom-middle hint-fade"
+          >Want an Example? Hover Here!</span
+        >
+        <input type="submit" id="submit" value="Search" />
+      </form>
+    </div>
+
+    <div class="heros"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
